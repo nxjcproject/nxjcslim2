@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83B28FD8-A569-432D-9CD1-9DE850BC8519}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NXJC.Slim.Service</RootNamespace>
+    <AssemblyName>NXJC.Slim.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExpressionHelper">
+      <HintPath>..\..\Lib\ExpressionHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlServerDataAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\SqlServerDataAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnergyConsumptionService.cs" />
+    <Compile Include="Infrastructure\ViewsDictionary.cs" />
+    <Compile Include="DCSAlarmService.cs" />
+    <Compile Include="MasterConfigureService.cs" />
+    <Compile Include="CementTypeConvertCoefficientService.cs" />
+    <Compile Include="CustomAnalyseItemService.cs" />
+    <Compile Include="ElectricPowerCountService.cs" />
+    <Compile Include="ExpressionService.cs" />
+    <Compile Include="GroupService.cs" />
+    <Compile Include="HandoverLogService.cs" />
+    <Compile Include="Infrastructure\ComboboxJsonParser.cs" />
+    <Compile Include="Infrastructure\ConnectionStringFactory.cs" />
+    <Compile Include="Infrastructure\DataGridJsonParser.cs" />
+    <Compile Include="Infrastructure\DataTable2ChartJson.cs" />
+    <Compile Include="Infrastructure\JsonHelper.cs" />
+    <Compile Include="Infrastructure\TreeGridJsonParser.cs" />
+    <Compile Include="Infrastructure\TreeJsonParser.cs" />
+    <Compile Include="KPIMaintainService.cs" />
+    <Compile Include="MachineHaltLogService.cs" />
+    <Compile Include="MachineHaltReasonService.cs" />
+    <Compile Include="MeterDataDisplayService.cs" />
+    <Compile Include="PeakValleyFlat\PVFChanges.cs" />
+    <Compile Include="PeakValleyFlat\PVFItem.cs" />
+    <Compile Include="PeakValleyFlat\PVFService.cs" />
+    <Compile Include="ProcessDataAnalyseService.cs" />
+    <Compile Include="ProductLineService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\Utility.cs" />
+    <Compile Include="StaffInfoService.cs" />
+    <Compile Include="StaffService.cs" />
+    <Compile Include="WarningLogService.cs" />
+    <Compile Include="WorkingSectionService.cs" />
+    <Compile Include="WorkingTeamService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

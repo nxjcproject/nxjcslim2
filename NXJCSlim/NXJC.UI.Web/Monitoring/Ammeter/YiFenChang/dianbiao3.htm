@@ -1,0 +1,1119 @@
+﻿<html>
+    <head>
+        <title></title>
+        <link href="/Scripts/easyui/themes/gray/easyui.css" rel="stylesheet" />
+        <link href="/Scripts/EasyUI/themes/color.css" rel="stylesheet" />
+        <link href="/Scripts/easyui/themes/icon.css" rel="stylesheet" />
+        <script src="/Scripts/easyui/jquery.min.js"></script>
+        <script src="/Scripts/easyui/jquery.easyui.min.js"></script>
+        <script src="/Scripts/EasyUI/locale/easyui-lang-zh_CN.js"></script>
+        <style>
+            table {
+                font-size:85%;
+                width:100%;
+            }
+            table td:first-child {
+                width: 50%;
+            }
+            .panel {
+                float:left;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                setInterval(display, 1000);
+            });
+
+            function display() {
+                for (var i = 1; i < 273; i++) {
+                    $('#Text' + i).val(Math.random());
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div id="wrapper" class="easyui-panel" style="width:98%;height:auto;padding:2px;">
+        <div class="easyui-panel" title="石灰石入库电气室（12E01）" style="width:49%;height:200px;padding:10px;">
+       <table>
+           <tr>
+               <td>设备名称</td><td>功率</td><td>电能</td>
+           </tr>
+           <tr>
+               <td>石灰石入库</td>
+               <td>
+                   <input id="Text1" type="text" /></td>
+               <td>
+                   <input id="Text2" type="text" /></td>
+           </tr>
+           <tr>
+               <td>水泥石膏破碎</td>
+               <td>
+                   <input id="Text3" type="text" /></td>
+               <td>
+                   <input id="Text4" type="text" /></td>
+           </tr>
+       </table>
+        </div>
+
+        <div class="easyui-panel" title="生料磨低压电气室（22E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>112.05M皮带</td>
+                <td>
+                    <input id="Text5" type="text" /></td>
+                <td>
+                    <input id="Text6" type="text" /></td>
+            </tr>
+            <tr>
+                <td>211.09M生料选粉机</td>
+                <td>
+                    <input id="Text7" type="text" /></td>
+                <td>
+                    <input id="Text8" type="text" /></td>
+            </tr>
+            <tr>
+                <td>211.03提升机</td>
+                <td>
+                    <input id="Text9" type="text" /></td>
+                <td>
+                    <input id="Text10" type="text" /></td>
+            </tr>
+            <tr>
+                <td>211.08提升机</td>
+                <td>
+                    <input id="Text11" type="text" /></td>
+                <td>
+                    <input id="Text12" type="text" /></td>
+            </tr>
+            <tr>
+                <td>210.26皮带</td>
+                <td>
+                    <input id="Text13" type="text" /></td>
+                <td>
+                    <input id="Text14" type="text" /></td>
+            </tr>
+            <tr>
+                <td>131.04皮带</td>
+                <td>
+                    <input id="Text15" type="text" /></td>
+                <td>
+                    <input id="Text16" type="text" /></td>
+            </tr>
+            <tr>
+                <td>220.01提升机</td>
+                <td>
+                    <input id="Text17" type="text" /></td>
+                <td>
+                    <input id="Text18" type="text" /></td>
+            </tr>
+            <tr>
+                <td>增湿塔喷水装置</td>
+                <td>
+                    <input id="Text19" type="text" /></td>
+                <td>
+                    <input id="Text20" type="text" /></td>
+            </tr>
+            <tr>
+                <td>1#空压机</td>
+                <td>
+                    <input id="Text21" type="text" /></td>
+                <td>
+                    <input id="Text22" type="text" /></td>
+            </tr>
+            <tr>
+                <td>2#空压机</td>
+                <td>
+                    <input id="Text23" type="text" /></td>
+                <td>
+                    <input id="Text24" type="text" /></td>
+            </tr>
+            <tr>
+                <td>3#空压机</td>
+                <td>
+                    <input id="Text25" type="text" /></td>
+                <td>
+                    <input id="Text26" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="窑尾低压电气室（31E02）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>221.11提升机</td>
+                <td>
+                    <input id="Text27" type="text" /></td>
+                <td>
+                    <input id="Text28" type="text" /></td>
+            </tr>
+            <tr>
+                <td>221.18罗茨风机</td>
+                <td>
+                    <input id="Text29" type="text" /></td>
+                <td>
+                    <input id="Text30" type="text" /></td>
+            </tr>
+            <tr>
+                <td>220.15罗茨风机</td>
+                <td>
+                    <input id="Text31" type="text" /></td>
+                <td>
+                    <input id="Text32" type="text" /></td>
+            </tr>
+            <tr>
+                <td>220.16罗茨风机</td>
+                <td>
+                    <input id="Text33" type="text" /></td>
+                <td>
+                    <input id="Text34" type="text" /></td>
+            </tr>
+            <tr>
+                <td>3#4#水泥磨配料站煤矸石入库系统</td>
+                <td>
+                    <input id="Text35" type="text" /></td>
+                <td>
+                    <input id="Text36" type="text" /></td>
+            </tr>
+            <tr>
+                <td>新配料站电源</td>
+                <td>
+                    <input id="Text37" type="text" /></td>
+                <td>
+                    <input id="Text38" type="text" /></td>
+            </tr>
+            <tr>
+                <td>3#4#水泥磨新配料站旧配电柜电源</td>
+                <td>
+                    <input id="Text39" type="text" /></td>
+                <td>
+                    <input id="Text40" type="text" /></td>
+            </tr>
+            <tr>
+                <td>3#4#号水泥磨配料站电源</td>
+                <td>
+                    <input id="Text41" type="text" /></td>
+                <td>
+                    <input id="Text42" type="text" /></td>
+            </tr>
+            <tr>
+                <td>废气处理电源</td>
+                <td>
+                    <input id="Text43" type="text" /></td>
+                <td>
+                    <input id="Text44" type="text" /></td>
+            </tr>
+            <tr>
+                <td>取煤机电源</td>
+                <td>
+                    <input id="Text45" type="text" /></td>
+                <td>
+                    <input id="Text46" type="text" /></td>
+            </tr>
+            <tr>
+                <td>原煤卸车及破碎（包括堆料机）</td>
+                <td>
+                    <input id="Text47" type="text" /></td>
+                <td>
+                    <input id="Text48" type="text" /></td>
+            </tr>
+            <tr>
+                <td>均化库内收尘风机221.03</td>
+                <td>
+                    <input id="Text49" type="text" /></td>
+                <td>
+                    <input id="Text50" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="循环水电气室（60E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>循环水系统</td>
+                <td>
+                    <input id="Text51" type="text" /></td>
+                <td>
+                    <input id="Text52" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+
+        <div class="easyui-panel" title="窑头低压电气室（33E02）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>窑头一次风机</td>
+                <td>
+                    <input id="Text53" type="text" /></td>
+                <td>
+                    <input id="Text54" type="text" /></td>
+            </tr>
+            <tr>
+                <td>熟料破碎</td>
+                <td>
+                    <input id="Text55" type="text" /></td>
+                <td>
+                    <input id="Text56" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.11罗茨风机</td>
+                <td>
+                    <input id="Text57" type="text" /></td>
+                <td>
+                    <input id="Text58" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.13罗茨风机</td>
+                <td>
+                    <input id="Text59" type="text" /></td>
+                <td>
+                    <input id="Text60" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.031罗茨风机</td>
+                <td>
+                    <input id="Text61" type="text" /></td>
+                <td>
+                    <input id="Text62" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.42链斗</td>
+                <td>
+                    <input id="Text63" type="text" /></td>
+                <td>
+                    <input id="Text64" type="text" /></td>
+            </tr>
+            <tr>
+                <td>66.24皮带</td>
+                <td>
+                    <input id="Text65" type="text" /></td>
+                <td>
+                    <input id="Text66" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.07罗茨风机</td>
+                <td>
+                    <input id="Text67" type="text" /></td>
+                <td>
+                    <input id="Text68" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.10罗茨风机</td>
+                <td>
+                    <input id="Text69" type="text" /></td>
+                <td>
+                    <input id="Text70" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.04罗茨风机</td>
+                <td>
+                    <input id="Text71" type="text" /></td>
+                <td>
+                    <input id="Text72" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.08罗茨风机</td>
+                <td>
+                    <input id="Text73" type="text" /></td>
+                <td>
+                    <input id="Text74" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.09罗茨风机</td>
+                <td>
+                    <input id="Text75" type="text" /></td>
+                <td>
+                    <input id="Text76" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.12罗茨风机</td>
+                <td>
+                    <input id="Text77" type="text" /></td>
+                <td>
+                    <input id="Text78" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.03罗茨风机</td>
+                <td>
+                    <input id="Text79" type="text" /></td>
+                <td>
+                    <input id="Text80" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.05罗茨风机</td>
+                <td>
+                    <input id="Text81" type="text" /></td>
+                <td>
+                    <input id="Text82" type="text" /></td>
+            </tr>
+            <tr>
+                <td>57.041罗茨风机</td>
+                <td>
+                    <input id="Text83" type="text" /></td>
+                <td>
+                    <input id="Text84" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.21提升机3#</td>
+                <td>
+                    <input id="Text85" type="text" /></td>
+                <td>
+                    <input id="Text86" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.22提升机</td>
+                <td>
+                    <input id="Text87" type="text" /></td>
+                <td>
+                    <input id="Text88" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.29风机</td>
+                <td>
+                    <input id="Text89" type="text" /></td>
+                <td>
+                    <input id="Text90" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.30风机</td>
+                <td>
+                    <input id="Text91" type="text" /></td>
+                <td>
+                    <input id="Text92" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.24打散机电源</td>
+                <td>
+                    <input id="Text93" type="text" /></td>
+                <td>
+                    <input id="Text94" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.23打散提升机</td>
+                <td>
+                    <input id="Text95" type="text" /></td>
+                <td>
+                    <input id="Text96" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84a.53风机</td>
+                <td>
+                    <input id="Text97" type="text" /></td>
+                <td>
+                    <input id="Text98" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84.54风机</td>
+                <td>
+                    <input id="Text99" type="text" /></td>
+                <td>
+                    <input id="Text100" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84.11提升机</td>
+                <td>
+                    <input id="Text101" type="text" /></td>
+                <td>
+                    <input id="Text102" type="text" /></td>
+            </tr>
+            <tr>
+                <td>84.12提升机</td>
+                <td>
+                    <input id="Text103" type="text" /></td>
+                <td>
+                    <input id="Text104" type="text" /></td>
+            </tr>
+            <tr>
+                <td>熟料内返电源</td>
+                <td>
+                    <input id="Text105" type="text" /></td>
+                <td>
+                    <input id="Text106" type="text" /></td>
+            </tr>
+            <tr>
+                <td>66AT01柜</td>
+                <td>
+                    <input id="Text107" type="text" /></td>
+                <td>
+                    <input id="Text108" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="煤磨低压电气室（42E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>煤粉制备进线电源柜</td>
+                <td>
+                    <input id="Text109" type="text" /></td>
+                <td>
+                    <input id="Text110" type="text" /></td>
+            </tr>
+            <tr>
+                <td>73.30罗茨风机</td>
+                <td>
+                    <input id="Text111" type="text" /></td>
+                <td>
+                    <input id="Text112" type="text" /></td>
+            </tr>
+            <tr>
+                <td>73.12排风机</td>
+                <td>
+                    <input id="Text113" type="text" /></td>
+                <td>
+                    <input id="Text114" type="text" /></td>
+            </tr>
+            <tr>
+                <td>73.29罗茨分机</td>
+                <td>
+                    <input id="Text115" type="text" /></td>
+                <td>
+                    <input id="Text116" type="text" /></td>
+            </tr>
+            <tr>
+                <td>73.31罗茨风机</td>
+                <td>
+                    <input id="Text117" type="text" /></td>
+                <td>
+                    <input id="Text118" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="窑头高压电气室（33E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>6101AH 进线柜</td>
+                <td>
+                    <input id="Text119" type="text" /></td>
+                <td>
+                    <input id="Text120" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6111AH 3#固定辊</td>
+                <td>
+                    <input id="Text123" type="text" /></td>
+                <td>
+                    <input id="Text124" type="text" /></td>
+            </tr>
+            
+            <tr>
+                <td>6112AH 3#活动辊</td>
+                <td>
+                    <input id="Text127" type="text" /></td>
+                <td>
+                    <input id="Text128" type="text" /></td>
+            </tr>
+           
+            <tr>
+                <td>6103AH 补偿电容柜</td>
+                <td>
+                    <input id="Text131" type="text" /></td>
+                <td>
+                    <input id="Text132" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6104AH 窑头、窑尾联络</td>
+                <td>
+                    <input id="Text133" type="text" /></td>
+                <td>
+                    <input id="Text134" type="text" /></td>
+            </tr>
+            
+            <tr>
+                <td>6106AH 煤磨</td>
+                <td>
+                    <input id="Text137" type="text" /></td>
+                <td>
+                    <input id="Text138" type="text" /></td>
+            </tr>
+           
+            <tr>
+                <td>6107AH 3#水泥磨</td>
+                <td>
+                    <input id="Text141" type="text" /></td>
+                <td>
+                    <input id="Text142" type="text" /></td>
+            </tr>
+           
+            <tr>
+                <td>6108AH 生料循环风机</td>
+                <td>
+                    <input id="Text145" type="text" /></td>
+                <td>
+                    <input id="Text146" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6109AH 3#循环风机</td>
+                <td>
+                    <input id="Text121" type="text" /></td>
+                <td>
+                    <input id="Text122" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6110AH 联络柜</td>
+                <td>
+                    <input id="Text125" type="text" /></td>
+                <td>
+                    <input id="Text126" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6201AH 进线柜</td>
+                <td>
+                    <input id="Text129" type="text" /></td>
+                <td>
+                    <input id="Text130" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6203AH 补偿电容</td>
+                <td>
+                    <input id="Text135" type="text" /></td>
+                <td>
+                    <input id="Text136" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6204AH 水泥磨变压器</td>
+                <td>
+                    <input id="Text139" type="text" /></td>
+                <td>
+                    <input id="Text140" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6205AH 4#活动辊</td>
+                <td>
+                    <input id="Text143" type="text" /></td>
+                <td>
+                    <input id="Text144" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6206AH 4#水泥磨</td>
+                <td>
+                    <input id="Text147" type="text" /></td>
+                <td>
+                    <input id="Text148" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6207AH 4#循环风机</td>
+                <td>
+                    <input id="Text149" type="text" /></td>
+                <td>
+                    <input id="Text150" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6208AH 5#空压机</td>
+                <td>
+                    <input id="Text151" type="text" /></td>
+                <td>
+                    <input id="Text152" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6209AH 4#固定辊</td>
+                <td>
+                    <input id="Text153" type="text" /></td>
+                <td>
+                    <input id="Text154" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6210AH 包装变压器</td>
+                <td>
+                    <input id="Text155" type="text" /></td>
+                <td>
+                    <input id="Text156" type="text" /></td>
+            </tr>
+            <tr>
+                <td>3#4#包机空压机电源</td>
+                <td>
+                    <input id="Text157" type="text" /></td>
+                <td>
+                    <input id="Text158" type="text" /></td>
+            </tr>
+             <tr>
+                <td>4#水泥磨空压机</td>
+                <td>
+                    <input id="Text159" type="text" /></td>
+                <td>
+                    <input id="Text160" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6#空压机</td>
+                <td>
+                    <input id="Text161" type="text" /></td>
+                <td>
+                    <input id="Text162" type="text" /></td>
+            </tr>
+             <tr>
+                <td>7#空压机</td>
+                <td>
+                    <input id="Text163" type="text" /></td>
+                <td>
+                    <input id="Text164" type="text" /></td>
+            </tr>
+             
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="窑尾高压电气室（31E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>6301AH 进线柜</td>
+                <td>
+                    <input id="Text165" type="text" /></td>
+                <td>
+                    <input id="Text166" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6303AH 补偿电容</td>
+                <td>
+                    <input id="Text167" type="text" /></td>
+                <td>
+                    <input id="Text168" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6304AH 生料变压器</td>
+                <td>
+                    <input id="Text169" type="text" /></td>
+                <td>
+                    <input id="Text170" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6305AH 生料固定辊</td>
+                <td>
+                    <input id="Text171" type="text" /></td>
+                <td>
+                    <input id="Text172" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6306AH 生料活动辊</td>
+                <td>
+                    <input id="Text173" type="text" /></td>
+                <td>
+                    <input id="Text174" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6401AH 进线柜</td>
+                <td>
+                    <input id="Text175" type="text" /></td>
+                <td>
+                    <input id="Text176" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6403AH 补偿电容</td>
+                <td>
+                    <input id="Text177" type="text" /></td>
+                <td>
+                    <input id="Text178" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6404AH 整流变压器</td>
+                <td>
+                    <input id="Text179" type="text" /></td>
+                <td>
+                    <input id="Text180" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6405AH 尾排风机</td>
+                <td>
+                    <input id="Text181" type="text" /></td>
+                <td>
+                    <input id="Text182" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6406AH 高温风机</td>
+                <td>
+                    <input id="Text183" type="text" /></td>
+                <td>
+                    <input id="Text184" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6407AH 窑尾变压器</td>
+                <td>
+                    <input id="Text185" type="text" /></td>
+                <td>
+                    <input id="Text186" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6408AH 窑头变压器</td>
+                <td>
+                    <input id="Text187" type="text" /></td>
+                <td>
+                    <input id="Text188" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6409AH 头排风机</td>
+                <td>
+                    <input id="Text189" type="text" /></td>
+                <td>
+                    <input id="Text190" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6410AH 联络柜</td>
+                <td>
+                    <input id="Text191" type="text" /></td>
+                <td>
+                    <input id="Text192" type="text" /></td>
+            </tr>
+             <tr>
+                <td>6411AH  余热进线</td>
+                <td>
+                    <input id="Text193" type="text" /></td>
+                <td>
+                    <input id="Text194" type="text" /></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="easyui-panel" title="总配高压室（69E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+             <tr>
+                <td>611一段进线柜 1AH</td>
+                <td>
+                    <input id="Text195" type="text" /></td>
+                <td>
+                    <input id="Text196" type="text" /></td>
+            </tr>
+             <tr>
+                <td>611电容补偿柜 3AH</td>
+                <td>
+                    <input id="Text197" type="text" /></td>
+                <td>
+                    <input id="Text198" type="text" /></td>
+            </tr>
+             <tr>
+                <td>611 1#2#深井线路4AH </td>
+                <td>
+                    <input id="Text199" type="text" /></td>
+                <td>
+                    <input id="Text200" type="text" /></td>
+            </tr>
+             <tr>
+                <td>612 1#2#深井线路4AH </td>
+                <td>
+                    <input id="Text201" type="text" /></td>
+                <td>
+                    <input id="Text202" type="text" /></td>
+            </tr> 
+            <tr>
+                <td>611 1#水泥磨主电机5AH</td>
+                <td>
+                    <input id="Text203" type="text" /></td>
+                <td>
+                    <input id="Text204" type="text" /></td>
+            </tr>
+             <tr>
+                <td>611 1#水泥磨变压器6AH </td>
+                <td>
+                    <input id="Text205" type="text" /></td>
+                <td>
+                    <input id="Text206" type="text" /></td>
+            </tr>
+             <tr>
+                <td>611 厂前动力7AH   </td>
+                <td>
+                    <input id="Text207" type="text" /></td>
+                <td>
+                    <input id="Text208" type="text" /></td>
+            </tr>
+             <tr>
+                <td>611 一段母联柜  8AH</td>
+                <td>
+                    <input id="Text209" type="text" /></td>
+                <td>
+                    <input id="Text210" type="text" /></td>
+            </tr> 
+            <tr>
+                <td>611变压器出线柜 9AH</td>
+                <td>
+                    <input id="Text211" type="text" /></td>
+                <td>
+                    <input id="Text212" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621二段进线柜11AH  </td>
+                <td>
+                    <input id="Text213" type="text" /></td>
+                <td>
+                    <input id="Text214" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621电容补偿柜13AH  </td>
+                <td>
+                    <input id="Text215" type="text" /></td>
+                <td>
+                    <input id="Text216" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621 3#4#深井线路14AH</td>
+                <td>
+                    <input id="Text217" type="text" /></td>
+                <td>
+                    <input id="Text218" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621 2#水泥磨主电机15AH</td>
+                <td>
+                    <input id="Text219" type="text" /></td>
+                <td>
+                    <input id="Text220" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621 2#水泥磨变压器16AH </td>
+                <td>
+                    <input id="Text221" type="text" /></td>
+                <td>
+                    <input id="Text222" type="text" /></td>
+            </tr>
+             <tr>
+                <td>621电动机柜18AH  </td>
+                <td>
+                    <input id="Text223" type="text" /></td>
+                <td>
+                    <input id="Text224" type="text" /></td>
+            </tr>
+             <tr>
+                <td>10#空压机</td>
+                <td>
+                    <input id="Text225" type="text" /></td>
+                <td>
+                    <input id="Text226" type="text" /></td>
+            </tr>
+             <tr>
+                <td>11#空压机</td>
+                <td>
+                    <input id="Text227" type="text" /></td>
+                <td>
+                    <input id="Text228" type="text" /></td>
+            </tr>
+            
+            
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="1#辊压机电气室（54E02）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                 <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+             <tr>
+                <td>1#打散机</td>
+                <td>
+                    <input id="Text229" type="text" /></td>
+                <td>
+                    <input id="Text230" type="text" /></td>
+            </tr>
+             <tr>
+                <td>1#活动辊</td>
+                <td>
+                    <input id="Text231" type="text" /></td>
+                <td>
+                    <input id="Text232" type="text" /></td>
+            </tr>
+             <tr>
+                <td>1#固定辊</td>
+                <td>
+                    <input id="Text233" type="text" /></td>
+                <td>
+                    <input id="Text234" type="text" /></td>
+            </tr>
+             <tr>
+                <td>水泥库上电源（北）</td>
+                <td>
+                    <input id="Text235" type="text" /></td>
+                <td>
+                    <input id="Text236" type="text" /></td>
+            </tr>
+             <tr>
+                <td>水泵房电源</td>
+                <td>
+                    <input id="Text237" type="text" /></td>
+                <td>
+                    <input id="Text238" type="text" /></td>
+            </tr>
+             <tr>
+                <td>生产部电源</td>
+                <td>
+                    <input id="Text239" type="text" /></td>
+                <td>
+                    <input id="Text240" type="text" /></td>
+            </tr>
+             <tr>
+                <td>1#出辊提升机</td>
+                <td>
+                    <input id="Text241" type="text" /></td>
+                <td>
+                    <input id="Text242" type="text" /></td>
+            </tr>
+             <tr>
+                <td>1#磨辊压机除尘风机</td>
+                <td>
+                    <input id="Text243" type="text" /></td>
+                <td>
+                    <input id="Text244" type="text" /></td>
+            </tr>
+             <tr>
+                <td>水泥库上电源（南）</td>
+                <td>
+                    <input id="Text245" type="text" /></td>
+                <td>
+                    <input id="Text246" type="text" /></td>
+            </tr>
+             <tr>
+                <td>辅材入料电源</td>
+                <td>
+                    <input id="Text247" type="text" /></td>
+                <td>
+                    <input id="Text248" type="text" /></td>
+            </tr>
+             <tr>
+                <td>磨房控制电源</td>
+                <td>
+                    <input id="Text249" type="text" /></td>
+                <td>
+                    <input id="Text250" type="text" /></td>
+            </tr>
+             <tr>
+                <td>1#包机总电源</td>
+                <td>
+                    <input id="Text251" type="text" /></td>
+                <td>
+                    <input id="Text252" type="text" /></td>
+            </tr>
+            <tr>
+                <td>2#包机总电源</td>
+                <td>
+                    <input id="Text253" type="text" /></td>
+                <td>
+                    <input id="Text254" type="text" /></td>
+            </tr>
+             <tr>
+                <td>8#空压机电源</td>
+                <td>
+                    <input id="Text255" type="text" /></td>
+                <td>
+                    <input id="Text256" type="text" /></td>
+            </tr>
+             <tr>
+                <td>9#空压机电源</td>
+                <td>
+                    <input id="Text257" type="text" /></td>
+                <td>
+                    <input id="Text258" type="text" /></td>
+            </tr>
+            
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="2#辊压机电气室（54E02）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+             <tr>
+                <td>2#磨主收尘风机</td>
+                <td>
+                    <input id="Text259" type="text" /></td>
+                <td>
+                    <input id="Text260" type="text" /></td>
+            </tr>
+             <tr>
+                <td>辅料库电源</td>
+                <td>
+                    <input id="Text261" type="text" /></td>
+                <td>
+                    <input id="Text262" type="text" /></td>
+            </tr>
+            
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="熟料内返电气室（50E01）" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+             <tr>
+                <td>化验室车队电源</td>
+                <td>
+                    <input id="Text263" type="text" /></td>
+                <td>
+                    <input id="Text264" type="text" /></td>
+            </tr>
+            
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="余热发电电气室" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+             <tr>
+                <td>发电机电度表</td>
+                <td>
+                    <input id="Text265" type="text" /></td>
+                <td>
+                    <input id="Text266" type="text" /></td>
+            </tr>
+             <tr>
+                <td>余热联络柜</td>
+                <td>
+                    <input id="Text267" type="text" /></td>
+                <td>
+                    <input id="Text268" type="text" /></td>
+            </tr>
+             <tr>
+                <td>7AH站用变压器柜</td>
+                <td>
+                    <input id="Text269" type="text" /></td>
+                <td>
+                    <input id="Text270" type="text" /></td>
+            </tr>
+             <tr>
+                <td>保安电源</td>
+                <td>
+                    <input id="Text271" type="text" /></td>
+                <td>
+                    <input id="Text272" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    </body>
+</html>

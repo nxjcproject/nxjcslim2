@@ -1,0 +1,383 @@
+﻿<html>
+    <head>
+        <title></title>
+        <link href="/Scripts/easyui/themes/gray/easyui.css" rel="stylesheet" />
+        <link href="/Scripts/EasyUI/themes/color.css" rel="stylesheet" />
+        <link href="/Scripts/easyui/themes/icon.css" rel="stylesheet" />
+        <script src="/Scripts/easyui/jquery.min.js"></script>
+        <script src="/Scripts/easyui/jquery.easyui.min.js"></script>
+        <script src="/Scripts/EasyUI/locale/easyui-lang-zh_CN.js"></script>
+        <style>
+            table {
+                font-size:85%;
+                width:100%;
+            }
+            table td:first-child {
+                width: 50%;
+            }
+            .panel {
+                float:left;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                setInterval(display, 1000);
+            });
+
+            function display() {
+                for (var i = 1; i < 83; i++) {
+                    $('#Text' + i).val(Math.random());
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div id="wrapper" class="easyui-panel" style="width:98%;height:auto;padding:2px;">
+        <div class="easyui-panel" title="6#低压电器室" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>6#选粉机</td>
+                <td>
+                    <input id="Text1" type="text" /></td>
+                <td>
+                    <input id="Text2" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#打散机</td>
+                <td>
+                    <input id="Text3" type="text" /></td>
+                <td>
+                    <input id="Text4" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨长皮带</td>
+                <td>
+                    <input id="Text5" type="text" /></td>
+                <td>
+                    <input id="Text6" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#入磨提升机</td>
+                <td>
+                    <input id="Text7" type="text" /></td>
+                <td>
+                    <input id="Text8" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#出磨提升机</td>
+                <td>
+                    <input id="Text9" type="text" /></td>
+                <td>
+                    <input id="Text10" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨辅传电机</td>
+                <td>
+                    <input id="Text11" type="text" /></td>
+                <td>
+                    <input id="Text12" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨小收尘风机</td>
+                <td>
+                    <input id="Text13" type="text" /></td>
+                <td>
+                    <input id="Text14" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨空压机</td>
+                <td>
+                    <input id="Text15" type="text" /></td>
+                <td>
+                    <input id="Text16" type="text" /></td>
+            </tr>
+            <tr>
+                <td>入库长皮带电机</td>
+                <td>
+                    <input id="Text17" type="text" /></td>
+                <td>
+                    <input id="Text18" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+        <div class="easyui-panel" title="7#低压电器室" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>7#选粉机</td>
+                <td>
+                    <input id="Text19" type="text" /></td>
+                <td>
+                    <input id="Text20" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#打散机</td>
+                <td>
+                    <input id="Text21" type="text" /></td>
+                <td>
+                    <input id="Text22" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨长皮带</td>
+                <td>
+                    <input id="Text23" type="text" /></td>
+                <td>
+                    <input id="Text24" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#入磨提升机</td>
+                <td>
+                    <input id="Text25" type="text" /></td>
+                <td>
+                    <input id="Text26" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#出磨提升机</td>
+                <td>
+                    <input id="Text27" type="text" /></td>
+                <td>
+                    <input id="Text28" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨辅传电机</td>
+                <td>
+                    <input id="Text29" type="text" /></td>
+                <td>
+                    <input id="Text30" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨小收尘风机</td>
+                <td>
+                    <input id="Text31" type="text" /></td>
+                <td>
+                    <input id="Text32" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨空压机</td>
+                <td>
+                    <input id="Text33" type="text" /></td>
+                <td>
+                    <input id="Text34" type="text" /></td>
+            </tr>
+            <tr>
+                <td>中转皮带电机</td>
+                <td>
+                    <input id="Text35" type="text" /></td>
+                <td>
+                    <input id="Text36" type="text" /></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="easyui-panel" title="堆场低压电器室" style="width:49%;height:200px;padding:10px;">
+        <table>
+            <tr>
+                 <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>堆场150皮带电机</td>
+                <td>
+                    <input id="Text37" type="text" /></td>
+                <td>
+                    <input id="Text38" type="text" /></td>
+            </tr>
+            <tr>
+                <td>堆场空压机电机</td>
+                <td>
+                    <input id="Text39" type="text" /></td>
+                <td>
+                    <input id="Text40" type="text" /></td>
+            </tr>
+            <tr>
+                <td>颚式破碎机电机</td>
+                <td>
+                    <input id="Text41" type="text" /></td>
+                <td>
+                    <input id="Text42" type="text" /></td>
+            </tr>
+            </table>
+       </div>
+       <div class="easyui-panel" title="水泵房电器室" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>水泵房1#循环水泵</td>
+                <td>
+                    <input id="Text43" type="text" /></td>
+                <td>
+                    <input id="Text44" type="text" /></td>
+            </tr>
+        </table>
+      </div>
+
+      <div class="easyui-panel" title="包装电器室" style="width:49%;height:200px;padding:10px;">
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>包机空压机电机</td>
+                <td>
+                    <input id="Text45" type="text" /></td>
+                <td>
+                    <input id="Text46" type="text" /></td>
+            </tr>
+            <tr>
+                <td>包机6#收尘风机</td>
+                <td>
+                    <input id="Text47" type="text" /></td>
+                <td>
+                    <input id="Text48" type="text" /></td>
+            </tr>
+            <tr>
+                <td>包机7#收尘风机</td>
+                <td>
+                    <input id="Text49" type="text" /></td>
+                <td>
+                    <input id="Text50" type="text" /></td>
+            </tr>
+        </table>
+      </div>
+      <div class="easyui-panel" title="高压电气室" style="width:49%;height:200px;padding:10px;">
+        <table>
+            <tr>
+                <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+            <tr>
+                <td>7#主排风机</td>
+                <td>
+                    <input id="Text51" type="text" /></td>
+                <td>
+                    <input id="Text52" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨电机</td>
+                <td>
+                    <input id="Text53" type="text" /></td>
+                <td>
+                    <input id="Text54" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#动辊电机</td>
+                <td>
+                    <input id="Text55" type="text" /></td>
+                <td>
+                    <input id="Text56" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#定辊电机</td>
+                <td>
+                    <input id="Text57" type="text" /></td>
+                <td>
+                    <input id="Text58" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#磨变</td>
+                <td>
+                    <input id="Text59" type="text" /></td>
+                <td>
+                    <input id="Text60" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#主排风机</td>
+                <td>
+                    <input id="Text61" type="text" /></td>
+                <td>
+                    <input id="Text62" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨电机</td>
+                <td>
+                    <input id="Text63" type="text" /></td>
+                <td>
+                    <input id="Text64" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#动辊电机</td>
+                <td>
+                    <input id="Text65" type="text" /></td>
+                <td>
+                    <input id="Text66" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#定辊电机</td>
+                <td>
+                    <input id="Text67" type="text" /></td>
+                <td>
+                    <input id="Text68" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#磨变</td>
+                <td>
+                    <input id="Text69" type="text" /></td>
+                <td>
+                    <input id="Text70" type="text" /></td>
+            </tr>
+            <tr>
+                <td>包机变压器</td>
+                <td>
+                    <input id="Text71" type="text" /></td>
+                <td>
+                    <input id="Text72" type="text" /></td>
+            </tr>
+            <tr>
+                <td>商混变压器</td>
+                <td>
+                    <input id="Text73" type="text" /></td>
+                <td>
+                    <input id="Text74" type="text" /></td>
+            </tr>
+            <tr>
+                <td>生活变压器</td>
+                <td>
+                    <input id="Text75" type="text" /></td>
+                <td>
+                    <input id="Text76" type="text" /></td>
+            </tr>
+            <tr>
+                <td>6#进线柜</td>
+                <td>
+                    <input id="Text77" type="text" /></td>
+                <td>
+                    <input id="Text78" type="text" /></td>
+            </tr>
+            <tr>
+                <td>7#进线柜</td>
+                <td>
+                    <input id="Text79" type="text" /></td>
+                <td>
+                    <input id="Text80" type="text" /></td>
+            </tr>
+        </table>
+      </div>
+      <div class="easyui-panel" title="6#低压电器室" style="width:49%;height:200px;padding:10px;">
+        
+        <table>
+            <tr>
+                 <td>设备名称</td><td>功率</td><td>电能</td>
+            </tr>
+           
+             <tr>
+                <td>堆场进线</td>
+                <td>
+                    <input id="Text81" type="text" /></td>
+                <td>
+                    <input id="Text82" type="text" /></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+   </body>
+</html>
