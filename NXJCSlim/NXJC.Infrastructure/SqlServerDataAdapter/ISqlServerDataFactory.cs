@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,5 +57,30 @@ namespace SqlServerDataAdapter
         /// <param name="complexQuery"></param>
         /// <returns></returns>
         IEnumerable<T> Query<T>(ComplexQuery complexQuery);
+        /// <summary>
+        /// 根据连接字符串和参数集合查询数据
+        /// </summary>
+        /// <param name="queryString"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        DataTable Query(string queryString, params SqlParameter[] parameters);
+        /// <summary>
+        /// 执行SQL语句
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        int ExecuteSQL(string sqlString);
+        /// <summary>
+        /// 执行存储过程
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        int ExecuteSQL(string storedProcName, params SqlParameter[] parameters);
+        /// <summary>
+        /// 执行SQL语句或者存储过程
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        int ExecuteSQL(string sqlString, bool isStoredProcedure, params SqlParameter[] parameters);
     }
 }

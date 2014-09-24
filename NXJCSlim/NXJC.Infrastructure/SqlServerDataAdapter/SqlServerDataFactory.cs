@@ -225,5 +225,136 @@ namespace SqlServerDataAdapter
             }
             return result;
         }
+        /// <summary>
+        /// 根据连接字符串和参数集合查询数据
+        /// </summary>
+        /// <param name="queryString"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public DataTable Query(string queryString, params SqlParameter[] parameters)
+        {
+            DataTable result = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = queryString;
+                foreach (var item in parameters)
+                {
+                    cmd.Parameters.Add(item);
+                }
+
+                try
+                {
+                    //conn.Open();
+                    SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                    ad.Fill(result);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Source + ":" + ex.Message);
+                }
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// 执行SQL语句
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        public int ExecuteSQL(string sqlString)
+        {
+            int result = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sqlString;
+                cmd.CommandType = CommandType.Text;
+
+                try
+                {
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Source + ":" + ex.Message);
+                }
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// 执行存储过程
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        public int ExecuteSQL(string storedProcName, params SqlParameter[] parameters)
+        {
+            int result = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = storedProcName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var item in parameters)
+                {
+                    cmd.Parameters.Add(item);
+                }
+
+                try
+                {
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Source + ":" + ex.Message);
+                }
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// 执行SQL语句或者存储过程
+        /// </summary>
+        /// <param name="sqlString"></param>
+        /// <returns></returns>
+        public int ExecuteSQL(string sqlString, bool isStoredProcedure, params SqlParameter[] parameters)
+        {
+            int result = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sqlString;
+
+                if (isStoredProcedure == true)
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                }
+                else
+                {
+                    cmd.CommandType = CommandType.Text;
+                }
+
+                foreach (var item in parameters)
+                {
+                    cmd.Parameters.Add(item);
+                }
+
+                try
+                {
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Source + ":" + ex.Message);
+                }
+            }
+
+            return result;
+        }
     }
 }
