@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections;

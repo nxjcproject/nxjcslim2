@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace NXJC.Slim.Service
 
          public CustomAnalyseItemService()
         {
-            connString = ConnectionStringFactory.GetNXJCConnectionString();
+            connString = ConnectionStringFactory.NXJCConnectionString;
         }
 
         public DataTable GetProcessDatas(ArrayList labelName)

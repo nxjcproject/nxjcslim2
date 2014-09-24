@@ -1,5 +1,5 @@
-﻿using NXJC.Slim.Service.Infrastructure;
-using NXJC.Slim.Service.Infrastructure.Configuration;
+﻿using NXJC.Infrastructure.Configuration;
+using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace NXJC.Slim.Service
     {
         public static DataTable GetProductLines()
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("ProductLine");
@@ -29,7 +29,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetLabelsByProductLineId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetByProductLineId(productLineId);
+            string connectionString = ConnectionStringFactory.GetConnectionStringByProductLineID(productLineId, DatabaseType.DCSSystemDatabase);
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("ContrastTable");

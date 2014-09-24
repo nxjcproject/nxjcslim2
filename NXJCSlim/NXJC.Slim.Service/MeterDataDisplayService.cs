@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SqlServerDataAdapter;
-using NXJC.Slim.Service.Infrastructure;
 using System.Data;
+using NXJC.Infrastructure.Configuration;
+using EasyUIJsonParser;
 
 namespace NXJC.Slim.Service
 {
@@ -14,7 +15,7 @@ namespace NXJC.Slim.Service
 
         public MeterDataDisplayService()
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             dataFactory = new SqlServerDataFactory(connectionString);
         }
         /// <summary>
@@ -37,7 +38,7 @@ namespace NXJC.Slim.Service
         {
             try
             {
-                string connString = ConnectionStringFactory.GetByFactoryId(factoryId);
+                string connString = ConnectionStringFactory.GetConnectionStringByFactoryID(factoryId, DatabaseType.EnergyDatabase);
                 ISqlServerDataFactory factory = new SqlServerDataFactory(connString);
 
                 ComplexQuery query = new ComplexQuery();
@@ -55,7 +56,7 @@ namespace NXJC.Slim.Service
 
         public static DataTable GetAmmetersByFactoryId(int factoryId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("AmmeterContrast");

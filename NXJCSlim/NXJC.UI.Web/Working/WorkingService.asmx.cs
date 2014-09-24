@@ -1,11 +1,13 @@
 ﻿using NXJC.Slim.Service;
-using NXJC.Slim.Service.Infrastructure;
+using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using EasyUIJsonParser;
+using EasyUIJsonParser.Infrastructure;
 
 namespace NXJC.UI.Web.Working
 {

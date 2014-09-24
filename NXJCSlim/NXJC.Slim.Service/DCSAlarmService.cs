@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,7 +14,7 @@ namespace NXJC.Slim.Service
 
         public DCSAlarmService()
         {
-            connString = ConnectionStringFactory.GetNXJCConnectionString();
+            connString = ConnectionStringFactory.NXJCConnectionString;
         }
 
         public DataTable GetProductLine()

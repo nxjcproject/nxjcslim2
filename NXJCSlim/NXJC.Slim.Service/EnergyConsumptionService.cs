@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetElectricityConsumptionAlarmSettingsByFactoryId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("ElectricityConsumptionAlarmParameterSetting");
@@ -33,7 +33,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetCoalConsumptionAlarmSettingsByFactoryId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("CoalConsumptionAlarmParameterSetting");

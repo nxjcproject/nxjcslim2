@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace NXJC.Slim.Service
 
         public WorkingTeamService()
         {
-            connString = ConnectionStringFactory.GetNXJCConnectionString();
+            connString = ConnectionStringFactory.NXJCConnectionString;
             dataFactory = new SqlServerDataFactory(connString);
         }
 

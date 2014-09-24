@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using NXJC.UI.Web.EasyUIDataGrid;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ namespace NXJC.UI.Web.Report
         [WebMethod]
         public static string GetCompanyData()
         {
-            string connString = ConnectionStringFactory.GetNXJCConnectionString();   //填写链接字符串
+            string connString = ConnectionStringFactory.NXJCConnectionString;   //填写链接字符串
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connString))
             {

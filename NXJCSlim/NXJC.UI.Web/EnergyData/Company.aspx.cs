@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using NXJC.Slim.Service.Infrastructure;
+using NXJC.Infrastructure.Configuration;
 
 namespace NXJC.UI.Web.EnergyData
 {
     public partial class Company : System.Web.UI.Page
     {
-        private static readonly string CONNECTION_STRING = ConnectionStringFactory.GetNXJCConnectionString();
+        private static readonly string CONNECTION_STRING = ConnectionStringFactory.NXJCConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SqlServerDataAdapter;
-using NXJC.Slim.Service.Infrastructure;
+using NXJC.Infrastructure.Configuration;
 using System.Data;
 using System.Transactions;
 
@@ -15,7 +15,7 @@ namespace NXJC.Slim.Service.PeakValleyFlat
 
         public PVFService()
         {
-            string connString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connString = ConnectionStringFactory.NXJCConnectionString;
             dataFactory = new SqlServerDataFactory(connString);
         }
 

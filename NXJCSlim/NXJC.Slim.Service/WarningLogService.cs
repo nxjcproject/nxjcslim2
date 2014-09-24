@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetWarningLog(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("DCSWarningLog");
@@ -34,7 +34,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetWarningLog(int productLineId, DateTime start)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("DCSWarningLog");

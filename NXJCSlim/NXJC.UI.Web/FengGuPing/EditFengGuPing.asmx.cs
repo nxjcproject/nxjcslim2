@@ -1,4 +1,5 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using EasyUIJsonParser.Infrastructure;
+using NXJC.Infrastructure.Configuration;
 using NXJC.Slim.Service.PeakValleyFlat;
 using System;
 using System.Collections.Generic;

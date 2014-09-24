@@ -4,8 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
-namespace NXJC.Slim.Service.Infrastructure
+namespace EasyUIJsonParser
 {
     public class TreeGridJsonParser
     {
@@ -33,7 +34,7 @@ namespace NXJC.Slim.Service.Infrastructure
                 sb.Append("\"").Append(columnsToParse[0]).Append("\":").Append("\"").Append(rootRow[0].ToString().Trim()).Append("\",");
                 sb.Append("\"state\":\"closed\",");
                 sb.Append("\"children\":[");
-                
+
                 string filter = string.Format("{0}='{1}'", groupBy, rootRow[0].ToString());
                 DataRow[] children = table.Select(filter);
 
@@ -177,7 +178,6 @@ namespace NXJC.Slim.Service.Infrastructure
 
                 dt.Rows.Add(row);
             }
-
 
             return dt;
         }

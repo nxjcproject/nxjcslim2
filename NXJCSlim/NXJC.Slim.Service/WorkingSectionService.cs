@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace NXJC.Slim.Service
 
         public WorkingSectionService()
         {
-            connString = ConnectionStringFactory.GetNXJCConnectionString();
+            connString = ConnectionStringFactory.NXJCConnectionString;
             dataFactory = new SqlServerDataFactory(connString);
         }
 
@@ -27,7 +27,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetWorkingTeamByProductLineId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("WorkingSection");

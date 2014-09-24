@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -34,7 +34,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulaGroupsByFactoryId(int factoryId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("FormulaGroup");
@@ -50,7 +50,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulaGroupsEffectived(int factoryId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -78,7 +78,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulaGroupsPendingEffectived(int factoryId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -104,7 +104,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulaGroupsPendingExpiration(int factoryId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -130,12 +130,12 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulasByGroupId(Guid groupId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("Formula");
             query.AddCriterion("GroupID", groupId, SqlServerDataAdapter.Infrastruction.CriteriaOperator.Equal);
-            query.OrderByClause = new SqlServerDataAdapter.Infrastruction.OrderByClause("LevelCode", false);
+            query.AddOrderByClause(new SqlServerDataAdapter.Infrastruction.OrderByClause("LevelCode", false));
 
             return factory.Query(query);
         }
@@ -147,7 +147,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetFormulaGroupInfoByGroupId(Guid groupId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("FormulaGroup");
@@ -164,7 +164,7 @@ namespace NXJC.Slim.Service
         {
             Guid id = Guid.NewGuid();
 
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -185,7 +185,7 @@ namespace NXJC.Slim.Service
         /// <param name="name"></param>
         public static void SaveFormulaGroupName(Guid groupId, string name)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -205,7 +205,7 @@ namespace NXJC.Slim.Service
         /// <param name="data"></param>
         public static void SaveFormulas(Guid groupId, DataTable data)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             // 删除现存公式
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);

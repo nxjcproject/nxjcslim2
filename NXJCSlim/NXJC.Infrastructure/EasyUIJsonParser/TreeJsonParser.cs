@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace NXJC.Slim.Service.Infrastructure
+namespace EasyUIJsonParser
 {
     public class TreeJsonParser
     {

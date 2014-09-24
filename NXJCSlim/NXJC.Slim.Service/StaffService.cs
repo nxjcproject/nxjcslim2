@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using SqlServerDataAdapter.Infrastruction;
 using System;
@@ -19,7 +19,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetWorkingTeamByProductLineId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("WorkingTeam");
@@ -35,7 +35,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetChargeManByWorkingTeamId(int workingTeamId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -56,7 +56,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetStaffInfo()
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("StaffInfo");

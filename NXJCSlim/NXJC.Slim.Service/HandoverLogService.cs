@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace NXJC.Slim.Service
     {
         public static DataTable GetHandoverLog()
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -37,7 +37,7 @@ namespace NXJC.Slim.Service
 
         public static DataTable GetHandoverLogByHandoverLogId(int handoverLogId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -63,7 +63,7 @@ namespace NXJC.Slim.Service
 
         public static DataTable GetWorkingSectionAssignmentByHandoverLogId(int handoverLogId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace NXJC.Slim.Service.Infrastructure
+namespace EasyUIJsonParser
 {
     public class DataTable2ChartJson
     {

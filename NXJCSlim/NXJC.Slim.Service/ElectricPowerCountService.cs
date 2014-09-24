@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace NXJC.Slim.Service
         /// <returns></returns>
         public static DataTable GetAvailableFormulaGroupByProductLineId(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
             DataSet ds = new DataSet();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -50,7 +50,7 @@ namespace NXJC.Slim.Service
             double valleyUnitPrice = 0.4310;
             double flatUnitPrice = 0.2744;
 
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
             Query query = new Query("table_ElectricPowerCount");

@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -11,7 +11,7 @@ namespace NXJC.UI.Web.EnergyData
 {
     public partial class TechnologicalProcess : System.Web.UI.Page
     {
-        private static readonly string CONNECTION_STRING = ConnectionStringFactory.GetNXJCConnectionString();
+        private static readonly string CONNECTION_STRING = ConnectionStringFactory.NXJCConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             Dictionary<string, string> dictionary = new Dictionary<string, string>();

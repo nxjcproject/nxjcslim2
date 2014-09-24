@@ -1,4 +1,4 @@
-﻿using NXJC.Slim.Service.Infrastructure;
+﻿using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,12 +13,12 @@ namespace NXJC.Slim.Service
         private string connString;
         public MasterConfigureService()
         {
-            connString = ConnectionStringFactory.GetNXJCConnectionString();
+            connString = ConnectionStringFactory.NXJCConnectionString;
         }
 
         public DataTable GetEquipment(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetByProductLineId(productLineId);
+            string connectionString = ConnectionStringFactory.GetConnectionStringByProductLineID(productLineId, DatabaseType.DCSSystemDatabase);
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -32,7 +32,7 @@ namespace NXJC.Slim.Service
 
         public DataTable GetMaser(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetByProductLineId(productLineId);
+            string connectionString = ConnectionStringFactory.GetConnectionStringByProductLineID(productLineId, DatabaseType.DCSSystemDatabase);
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -46,7 +46,7 @@ namespace NXJC.Slim.Service
 
         public DataTable GetAlarmConfigure(int productLineId)
         {
-            string connectionString = ConnectionStringFactory.GetByProductLineId(productLineId);
+            string connectionString = ConnectionStringFactory.GetConnectionStringByProductLineID(productLineId, DatabaseType.DCSSystemDatabase);
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

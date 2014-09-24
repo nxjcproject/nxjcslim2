@@ -1,5 +1,5 @@
 ﻿using NXJC.Slim.Service;
-using NXJC.Slim.Service.Infrastructure;
+using NXJC.Infrastructure.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EasyUIJsonParser;
 
 namespace NXJC.UI.Web.ProcessDataAnalyse
 {

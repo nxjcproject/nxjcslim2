@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace NXJC.Slim.Service.Infrastructure.Configuration
+namespace NXJC.Infrastructure.Configuration
 {
     public class ViewsDictionary
     {
@@ -43,7 +43,7 @@ namespace NXJC.Slim.Service.Infrastructure.Configuration
 
         private void InitializeDictionary()
         {
-            string connectionString = ConnectionStringFactory.GetNXJCConnectionString();
+            string connectionString = ConnectionStringFactory.NXJCConnectionString;
 
             ISqlServerDataFactory factory = new SqlServerDataFactory(connectionString);
 
