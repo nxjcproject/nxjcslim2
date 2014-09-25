@@ -1682,6 +1682,7 @@
     <Content Include="SectionAndGroup\WorkingTeam.aspx" />
     <Content Include="staffInfo\StaffInfo.asmx" />
     <Content Include="staffInfo\StaffInfo.aspx" />
+    <Content Include="Test\Test.aspx" />
     <Content Include="Working\HandoverLoger.aspx" />
     <Content Include="Working\HandoverLogQuerying.aspx" />
     <Content Include="Working\WorkingService.asmx" />
@@ -2311,6 +2312,13 @@
     </Compile>
     <Compile Include="staffInfo\StaffInfo.aspx.designer.cs">
       <DependentUpon>StaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Working\HandoverLoger.aspx.cs">
       <DependentUpon>HandoverLoger.aspx</DependentUpon>

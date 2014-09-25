@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppStructure.cs" />
+    <Compile Include="AppStructureService.cs" />
     <Compile Include="EnergyConsumptionService.cs" />
     <Compile Include="DCSAlarmService.cs" />
     <Compile Include="MasterConfigureService.cs" />
