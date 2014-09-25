@@ -37,7 +37,12 @@ namespace SqlServerDataAdapter.Infrastruction
             get
             {
                 if (_parameterName == "" || _parameterName == null)
-                    return _fieldName;
+                {
+                    if (_fieldName.Split('.').Count() == 1)
+                        return _fieldName;
+                    else
+                        return _fieldName.Split('.')[0] + _fieldName.Split('.')[1];
+                }
                 else
                     return _parameterName;
             }

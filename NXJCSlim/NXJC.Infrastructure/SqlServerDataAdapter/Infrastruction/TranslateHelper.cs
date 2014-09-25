@@ -44,7 +44,14 @@ namespace SqlServerDataAdapter.Infrastruction
         /// <returns></returns>
         public static string GetStringFromCriterion(Criterion criterion)
         {
-            return String.Format("[{0}]{1}@{2}", criterion.FieldName, GetStringFromCriteriaOperater(criterion.CriteriaOperator), criterion.ParameterName);
+            if (criterion.FieldName.Split('.').Count() == 1)
+            {
+                return String.Format("[{0}]{1}@{2}", criterion.FieldName, GetStringFromCriteriaOperater(criterion.CriteriaOperator), criterion.ParameterName);
+            }
+            else
+            {
+                return String.Format("[{0}].[{1}]{2}@{3}", criterion.FieldName.Split('.')[0], criterion.FieldName.Split('.')[1], GetStringFromCriteriaOperater(criterion.CriteriaOperator), criterion.ParameterName);
+            }
         }
 
         /// <summary>
