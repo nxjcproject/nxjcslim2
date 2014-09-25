@@ -71,11 +71,11 @@ namespace SqlServerDataAdapter
         /// <returns></returns>
         int ExecuteSQL(string sqlString);
         /// <summary>
-        /// 执行存储过程
+        /// 执行带参数SQL语句
         /// </summary>
         /// <param name="sqlString"></param>
         /// <returns></returns>
-        int ExecuteSQL(string storedProcName, params SqlParameter[] parameters);
+        int ExecuteSQL(string sqlString, params SqlParameter[] parameters);
         /// <summary>
         /// 执行SQL语句或者存储过程
         /// </summary>

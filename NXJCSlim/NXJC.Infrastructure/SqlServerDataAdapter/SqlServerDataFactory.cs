@@ -286,19 +286,19 @@ namespace SqlServerDataAdapter
             return result;
         }
         /// <summary>
-        /// 执行存储过程
+        /// 执行带参数SQL语句
         /// </summary>
         /// <param name="sqlString"></param>
         /// <returns></returns>
-        public int ExecuteSQL(string storedProcName, params SqlParameter[] parameters)
+        public int ExecuteSQL(string sqlString, params SqlParameter[] parameters)
         {
             int result = 0;
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = storedProcName;
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = sqlString;
+                cmd.CommandType = CommandType.Text;
                 foreach (var item in parameters)
                 {
                     cmd.Parameters.Add(item);
