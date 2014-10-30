@@ -62,6 +62,7 @@
     <Compile Include="MachineHaltLogService.cs" />
     <Compile Include="MachineHaltReasonService.cs" />
     <Compile Include="MeterDataDisplayService.cs" />
+    <Compile Include="OrganizationService.cs" />
     <Compile Include="PeakValleyFlat\PVFChanges.cs" />
     <Compile Include="PeakValleyFlat\PVFItem.cs" />
     <Compile Include="PeakValleyFlat\PVFService.cs" />

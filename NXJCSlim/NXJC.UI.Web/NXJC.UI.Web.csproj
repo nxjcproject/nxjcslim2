@@ -70,6 +70,8 @@
     <Content Include="AlarmLog\DCSAlarm.aspx" />
     <Content Include="CementType\CementTypeConvertCoefficient.asmx" />
     <Content Include="CementType\CementTypeConvertCoefficient.aspx" />
+    <Content Include="Common\OrganisationService.asmx" />
+    <Content Include="Common\OrganisationTree.ascx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -1682,6 +1684,10 @@
     <Content Include="SectionAndGroup\WorkingTeam.aspx" />
     <Content Include="staffInfo\StaffInfo.asmx" />
     <Content Include="staffInfo\StaffInfo.aspx" />
+    <Content Include="Temp\HaltCauseQuerying.aspx" />
+    <Content Include="Temp\ShiftNTeamQuering.aspx" />
+    <Content Include="Temp\ShiftsQuering.aspx" />
+    <Content Include="Temp\SlaverHaltDelayAlarmLogQuerying.aspx" />
     <Content Include="Test\Test.aspx" />
     <Content Include="Working\HandoverLoger.aspx" />
     <Content Include="Working\HandoverLogQuerying.aspx" />
@@ -2085,6 +2091,17 @@
     <Compile Include="CementType\CementTypeConvertCoefficient.aspx.designer.cs">
       <DependentUpon>CementTypeConvertCoefficient.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Common\OrganisationService.asmx.cs">
+      <DependentUpon>OrganisationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\OrganisationTree.ascx.cs">
+      <DependentUpon>OrganisationTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\OrganisationTree.ascx.designer.cs">
+      <DependentUpon>OrganisationTree.ascx</DependentUpon>
+    </Compile>
     <Compile Include="EasyUIDataGrid\DataGridTemplateHelper.cs" />
     <Compile Include="EnergyConsumptionAlarm\Configuration.aspx.cs">
       <DependentUpon>Configuration.aspx</DependentUpon>
@@ -2312,6 +2329,34 @@
     </Compile>
     <Compile Include="staffInfo\StaffInfo.aspx.designer.cs">
       <DependentUpon>StaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\HaltCauseQuerying.aspx.cs">
+      <DependentUpon>HaltCauseQuerying.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Temp\HaltCauseQuerying.aspx.designer.cs">
+      <DependentUpon>HaltCauseQuerying.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\ShiftNTeamQuering.aspx.cs">
+      <DependentUpon>ShiftNTeamQuering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Temp\ShiftNTeamQuering.aspx.designer.cs">
+      <DependentUpon>ShiftNTeamQuering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\ShiftsQuering.aspx.cs">
+      <DependentUpon>ShiftsQuering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Temp\ShiftsQuering.aspx.designer.cs">
+      <DependentUpon>ShiftsQuering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\SlaverHaltDelayAlarmLogQuerying.aspx.cs">
+      <DependentUpon>SlaverHaltDelayAlarmLogQuerying.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Temp\SlaverHaltDelayAlarmLogQuerying.aspx.designer.cs">
+      <DependentUpon>SlaverHaltDelayAlarmLogQuerying.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>

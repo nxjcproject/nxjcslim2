@@ -13,9 +13,7 @@ namespace NXJC.UI.Web.Test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            AppStructureService service = new AppStructureService();
-            DataTable dt = service.GetLevelCode();
-            GridView1.DataSource = dt;
+            GridView1.DataSource = OrganizationService.GetOrganizationTreeWithProductLineType();
             GridView1.DataBind();
         }
     }
